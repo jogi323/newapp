@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <div id="logbox">
+      <h1>account login</h1>
+      <form novalidate #signinForm="ngForm">
+        
+        <input name="email" type="email" placeholder="Email address" required #email=ngModel [(ngModel)]="user.email"/>
+        <input name="password" type="password" placeholder="Choose a password" required #password=ngModel [(ngModel)]="user.password"/>
+        <button type="submit" value="Sign me in!" class="inputButton" (click)="singin(user)">Sign me in!</button>
+        <div class="text-center">
+          <a [routerLink]="['signup']">create an account</a>
+          <a href="#" id="">forgot password</a>
+        </div>
+      </form>
+    </div>
+  </div>
